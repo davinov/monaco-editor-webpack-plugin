@@ -226,7 +226,8 @@ function createLoaderRules(languages: IFeatureDefinition[], features: IFeatureDe
     })(${JSON.stringify(workerPaths, null, 2)})`,
   };
   return [
-    {
+    // FIXME: from 0.21, there is no need to have this loader anymore
+    /*{
       test: /monaco-editor[/\\]esm[/\\]vs[/\\]editor[/\\]editor.(api|main).js/,
       use: [{
         loader: INCLUDE_LOADER_PATH,
@@ -236,7 +237,7 @@ function createLoaderRules(languages: IFeatureDefinition[], features: IFeatureDe
           post: languagePaths.map((importPath) => resolveMonacoPath(importPath)),
         },
       }],
-    },
+    },*/
   ];
 }
 
